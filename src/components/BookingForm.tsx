@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 
 type BookingStatus = "idle" | "sent";
 
@@ -17,7 +17,7 @@ export default function BookingForm() {
   const [status, setStatus] = useState<BookingStatus>("idle");
   const today = new Date().toISOString().split("T")[0];
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     event.currentTarget.reset();
     setStatus("sent");

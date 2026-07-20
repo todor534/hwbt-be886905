@@ -1,10 +1,11 @@
+import type { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
 type Service = {
   title: string;
   description: string;
   details: string[];
-  icon: JSX.Element;
+  icon: ReactElement;
 };
 
 type ProcessStep = {
